@@ -503,6 +503,10 @@ footer .text span a:hover {
 }
 
 @media (max-width: 750px) {
+  .home{
+    background: none;
+  }
+  
   nav .navbar {
     width: 90%;
   }
