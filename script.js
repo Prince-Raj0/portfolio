@@ -44,3 +44,24 @@ let navLinks = document.querySelectorAll(".menu li a");
 navLinks.forEach((link) => {
   link.addEventListener("click", hideNavMenu);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const radioButtons = document.querySelectorAll('input[name="project-filter"]');
+  const projectBoxes = document.querySelectorAll('.projects .boxes .box');
+
+  radioButtons.forEach(radio => {
+    radio.addEventListener('change', (event) => {
+      const filter = event.target.id;
+      
+      projectBoxes.forEach(box => {
+        const projectType = box.getAttribute('data-project-type');
+        
+        if (filter === 'all' || filter === projectType) {
+          box.style.display = 'block';
+        } else {
+          box.style.display = 'none';
+        }
+      });
+    });
+  });
+});

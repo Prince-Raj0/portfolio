@@ -359,6 +359,90 @@ section .button button:hover {
   color: #4070f4;
 }
 
+/* portfolio */
+/* Radio Buttons Styling */
+.radio-buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.radio-buttons label {
+  background: #fff;
+  border: 2px solid #333;
+  color: #333;
+  padding: 8px 20px;
+  margin: 0 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.radio-buttons input[type="radio"] {
+  display: none;
+}
+
+.radio-buttons input[type="radio"]:checked + label {
+  background: #3498db; /* Change to your primary color */
+  color: #fff;
+  border-color: #3498db;
+}
+
+/* Project Boxes Styling */
+.projects .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between the project boxes */
+}
+
+.projects .boxes .box {
+  position: relative;
+  width: 300px; /* Adjust this for the desired size */
+  height: 200px; /* Keep a consistent height */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.projects .boxes .box:hover {
+  transform: translateY(-5px);
+}
+
+.projects .boxes .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This is key! It makes the image cover the box */
+  transition: transform 0.3s ease-in-out;
+}
+
+.projects .boxes .box:hover img {
+  transform: scale(1.1);
+}
+
+/* Title Overlay Styling */
+.projects .boxes .box .title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.projects .boxes .box:hover .title-overlay {
+  transform: translateY(0);
+}
+
+/* /portfolio */
+
 /* My Services CSS */
 .services .boxes {
   display: flex;
@@ -716,4 +800,46 @@ footer .text span a:hover {
   font-family: helvetica;
   color: #2c3e50;
   padding-bottom: 6px;
+}
+
+/* Responsive Design */
+
+/* For tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .projects .boxes {
+    gap: 16px;
+  }
+
+  .projects .boxes .box {
+    width: 250px;
+    height: 180px;
+  }
+
+  .radio-buttons label {
+    padding: 6px 16px;
+    font-size: 14px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .radio-buttons label {
+    display: inline-flex;
+    margin: 5px;
+  }
+
+  .projects .boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects .boxes .box {
+    width: 90%;
+    height: 180px;
+  }
+
+  .projects .boxes .box .title-overlay {
+    font-size: 16px;
+    padding: 8px;
+  }
 }
