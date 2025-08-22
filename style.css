@@ -9,6 +9,11 @@
   scroll-behavior: smooth;
 }
 
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
 /* Custom Scroll Bar CSS */
 ::-webkit-scrollbar {
   width: 10px;
@@ -389,6 +394,11 @@ section .button button:hover {
 }
 
 /* Project Boxes Styling */
+.projects{
+  height: 100%;
+  width: 100%;
+}
+
 .projects .boxes {
   display: flex;
   flex-wrap: wrap;
