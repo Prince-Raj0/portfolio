@@ -503,6 +503,12 @@ section .button button:hover {
   color: #4070f4;
 }
 
+.services .boxes .box .topic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 .services .boxes .box:hover .topic,
 .services .boxes .box:hover p {
   color: #0E2431;
