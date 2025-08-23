@@ -300,6 +300,20 @@ section .button button:hover {
 }
 
 /* My Skills CSS */
+.topic {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 .skills {
   background: #F0F8FF;
 }
@@ -343,14 +357,14 @@ section .button button:hover {
 }
 
 .skills-details .boxes {
-  width: 45%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: gap;
 }
 
 .skills-details .box {
-  width: calc(100% / 2 - 20px);
+  width: calc(100% / 4 - 5px);
   margin: 20px 0;
 }
 
@@ -394,11 +408,6 @@ section .button button:hover {
 }
 
 /* Project Boxes Styling */
-.projects{
-  height: 100%;
-  width: 100%;
-}
-
 .projects .boxes {
   display: flex;
   flex-wrap: wrap;
@@ -669,8 +678,12 @@ footer .text span a:hover {
   }
 
   .services .boxes .box {
-    margin: 20px 0;
+    margin: 2px 0;
     width: 100%;
+  }
+
+  .skills-details .box {
+  width: calc(100% / 2 - 5px);
   }
 
   .contact .text {
